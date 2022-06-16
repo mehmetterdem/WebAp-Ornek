@@ -215,7 +215,10 @@ namespace WebApıOrnek.Controllers
             SqlCommand cmd = new SqlCommand($"insert into Orders (CustomerID,EmployeeID,ShipVia) values ('Mhmet',1,1))", _connection);
             _connection.Open();
             SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
 
+            }
 
         }
 
